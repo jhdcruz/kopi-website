@@ -1,0 +1,23 @@
+{
+  "name": "kopi",
+  "version": "1.0.0",
+  "description": "Kopi Shap website in compliance to CITE 001",
+  "author": "Joshua Hero H. Dela Cruz <mjhdelacruz@tip.edu.ph>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"yarn dev:react\" \"yarn dev:serve\" --kill-others-on-fail",
+    "build": "concurrently \"yarn build:react\" \"yarn build:scss\"",
+    "dev:serve": "serve -l 3000 src/index.html",
+    "dev:react": "babel --watch src/components --out-dir dist/components --presets react-app/prod",
+    "dev:scss": "sass --watch --style=compressed src/scss:dist/css",
+    "build:react": "babel src/components --out-dir src/components/dist --presets react-app/prod",
+    "build:scss": "sass --style=compressed src/scss:dist/css"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-react-app": "10.0.0",
+    "concurrently": "6.3.0",
+    "sass": "1.43.4",
+    "serve": "12.0.1"
+  }
+}
