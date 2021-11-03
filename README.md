@@ -11,7 +11,7 @@ Kopi Business Website.
 
 ## Setup
 
-1. Install prerequisites:
+1. Install optional tools:
 
 - [`Node.js ~16` & `npm ~7`](https://nodejs.org)
 
@@ -24,10 +24,11 @@ yarn        # or npm install
 
 > `yarn` can be installed with `npm i -g yarn`.
 
-3. Build or Start development server.
-
-> see [`./package.json`](./package.json) scripts section for complete scripts list.
-
+3. Start development server.
+   
+```sh
+yarn start 
+```
 
 ## License
 
