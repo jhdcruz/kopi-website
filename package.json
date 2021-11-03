@@ -1,8 +1,7 @@
 {
   "name": "kopi",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Kopi business website",
   "scripts": {
     "start": "serve -l 3000",
     "fmt": "yarn fmt:html && yarn fmt:css && yarn fmt:js",
@@ -10,7 +9,6 @@
     "fmt:css": "prettier --write **/*.css && stylelint --fix **/*.css",
     "fmt:js": "eslint **/*.js --fix && prettier --write src/js/**/*.js"
   },
-  "keywords": [],
   "author": "Joshua Hero H. Dela Cruz (mjhdelacruz@tip.edu.ph)",
   "license": "MIT",
   "devDependencies": {
