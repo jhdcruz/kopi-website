@@ -1,0 +1,65 @@
+.landing {
+  background: url("../assets/img/landing.png") no-repeat right;
+  background-size: 65vw;
+
+  .front-matter {
+    background: transparent;
+    width: max-content;
+    padding: 20vh 8vw;
+
+    h2 {
+      color: rgb(39, 121, 50);
+      font: 900 4vw "Inter", sans-serif;
+      letter-spacing: 0.2pt;
+      margin: 2.35rem 0;
+      text-shadow: 0 0 1px #888;
+    }
+
+    span {
+      color: #222;
+    }
+  }
+}
+
+.primary {
+  color: white;
+  background-color: rgb(46, 129, 57);
+  padding: 0.7rem 1.5rem;
+  margin: 1rem 0;
+  border: 3px solid transparent;
+  border-radius: 2vw;
+  box-sizing: border-box;
+  position: relative;
+  transition: background-color 0.13s ease-in-out;
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 0 2px inset;
+    transition: box-shadow 0.15s ease-in-out;
+  }
+}
+
+.secondary {
+  margin: 0.75rem 1.25rem;
+  padding: 0.25rem;
+  border-radius: 2vw;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 100%;
+    left: 0;
+    background: #222;
+    transition: transform 0.3s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
