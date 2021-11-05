@@ -25,28 +25,41 @@
 
       <div class="menu">
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./pages/menu.html">Menu</a></li>
-          <li><a href="./pages/contact.html">Contact</a></li>
-          <li><a href="./pages/about.html">About</a></li>
+          <li><a class="underline" href="./index.html">Home</a></li>
+          <li><a class="underline" href="./pages/menu.html">Menu</a></li>
+          <li><a class="underline" href="./pages/contact.html">Contact</a></li>
+          <li><a class="underline" href="./pages/about.html">About</a></li>
         </ul>
 
         <a href="./pages/order.html" class="cart">
-          <img src="./assets/icons/bag.svg" alt="Shopping Cart" />
+          <img
+            src="./assets/icons/bag.svg"
+            alt="Shopping Cart"
+            draggable="false"
+          />
         </a>
       </div>
     </nav>
 
     <!-- Landing Page -->
     <section class="landing">
-        <div class="front-matter">
-          <h2>
-            Spread the cheer,<br />
-            <span>Have a cup here.</span>
-          </h2>
+      <div class="front-matter">
+        <!-- Tagline -->
+        <h2>
+          Spread the cheer,<br />
+          <span>Have a cup here.</span>
+        </h2>
 
-          <a href="./pages/menu.html" class="primary">Let's Start →</a>
-          <a href="./pages/about.html" class="secondary">About the Company →</a>
+        <!-- Interactive Buttons -->
+        <a href="./pages/menu.html" class="primary">Let's Start →</a>
+        <a href="./pages/about.html" class="secondary underline">
+          About the Company →
+        </a>
+
+        <!-- Copyright Notice -->
+        <h6 class="copyright">
+          Copyright &copy; 2021 Kopi Inc. All rights reserved.
+        </h6>
       </div>
     </section>
   </body>

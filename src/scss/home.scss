@@ -1,18 +1,19 @@
 .landing {
-  background: url("../assets/img/landing.png") no-repeat right;
+  background: url("../assets/img/landing-c.png") no-repeat right;
   background-size: 65vw;
+  height: 90.5vh;
 
   .front-matter {
     background: transparent;
     width: max-content;
-    padding: 20vh 8vw;
+    padding: 20vh 8vw 0 8vw;
 
     h2 {
-      color: rgb(39, 121, 50);
+      color: #bd8550;
       font: 900 4vw "Inter", sans-serif;
       letter-spacing: 0.2pt;
       margin: 2.35rem 0;
-      text-shadow: 0 0 1px #888;
+      text-shadow: 0 0 2px #888;
     }
 
     span {
@@ -23,10 +24,10 @@
 
 .primary {
   color: white;
-  background-color: rgb(46, 129, 57);
+  background-color: #bd8550;
   padding: 0.7rem 1.5rem;
   margin: 1rem 0;
-  border: 3px solid transparent;
+  border: 0.25vw solid transparent;
   border-radius: 2vw;
   box-sizing: border-box;
   position: relative;
@@ -34,7 +35,7 @@
 
   &:hover,
   &:active {
-    box-shadow: 0 0 0 2px inset;
+    box-shadow: 0 0 0 0.15vw inset;
     transition: box-shadow 0.15s ease-in-out;
   }
 }
@@ -44,22 +45,10 @@
   padding: 0.25rem;
   border-radius: 2vw;
   position: relative;
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    top: 100%;
-    left: 0;
-    background: #222;
-    transition: transform 0.3s;
-    transform: scaleX(0);
-    transform-origin: right;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
+.copyright {
+  font-size: 0.9vw;
+  color: #aaa;
+  margin-top: 9rem;
 }
