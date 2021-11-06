@@ -14,7 +14,7 @@
   "author": "Joshua Hero H. Dela Cruz (mjhdelacruz@tip.edu.ph)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "8.1.0",
+    "eslint": "8.2.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.4.1",
