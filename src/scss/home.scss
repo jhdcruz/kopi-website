@@ -25,34 +25,3 @@ body {
     }
   }
 }
-
-.primary {
-  color: white;
-  background-color: #bd8550;
-  padding: 0.7rem 1.5rem;
-  margin: 1rem 0;
-  border: 0.25vw solid transparent;
-  border-radius: 2vw;
-  box-sizing: border-box;
-  position: relative;
-  transition: background-color 0.13s ease-in-out;
-
-  &:hover,
-  &:active {
-    box-shadow: 0 0 0 0.15vw inset;
-    transition: box-shadow 0.15s ease-in-out;
-  }
-}
-
-.secondary {
-  margin: 0.75rem 1.25rem;
-  padding: 0.25rem;
-  border-radius: 2vw;
-  position: relative;
-}
-
-.copyright {
-  font-size: 0.9vw;
-  color: #aaa;
-  margin-top: 9rem;
-}
