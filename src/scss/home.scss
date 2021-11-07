@@ -1,7 +1,11 @@
+body {
+  overflow: hidden;
+}
+
 .landing {
-  background: url("../assets/img/landing-c.png") no-repeat right;
-  background-size: 65vw;
-  height: 90.5vh;
+  background: url("../assets/img/landing.png") no-repeat right;
+  background-size: 70vw 100vh;
+  height: 100vh;
 
   .front-matter {
     background: transparent;
