@@ -120,8 +120,15 @@ a {
 }
 
 .copyright {
-  font-weight: normal;
+  font-weight: 600;
   font-size: 0.9vw;
   color: #aaa;
   margin-top: 9rem;
+}
+
+.copyright-footer {
+  margin-top: 3vw;
+  padding: 1vw 0;
+  text-align: center;
+  background-color: rgba(235, 235, 235, 0.5);
 }
