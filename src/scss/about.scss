@@ -1,0 +1,31 @@
+.intro {
+  display: flex;
+  padding: 3.4vw 5vw 0 5vw;
+  align-items: center;
+}
+
+.heading {
+  padding: 0 5vw;
+
+  h2 {
+    font-size: 3vw;
+    font-weight: 900;
+    margin-bottom: 1.4vw;
+  }
+
+  p {
+    font-size: 1.2vw;
+    line-height: 1.5;
+    margin: 1.4vw 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+img {
+  border-radius: 0.5vw;
+  box-shadow: 0 0 0.55vw #999;
+  width: 50vw;
+}
