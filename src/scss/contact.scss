@@ -40,9 +40,11 @@ select {
     font-size: 1vw;
   }
 
-  a {
-    float: right;
-    margin: 0.75vw 1.5vw;
+  .reset {
+    padding: 0.25vw;
+    margin: 0.7vw 1.5vw;
+    background-color: transparent;
+    border: none;
   }
 }
 
