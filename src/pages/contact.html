@@ -26,9 +26,9 @@
       <div class="menu">
         <ul>
           <li><a class="underline" href="../../index.html">Home</a></li>
-          <li><a class="underline" href="menu.html">Menu</a></li>
+          <li><a class="underline" href="./menu.html">Menu</a></li>
           <li><a class="underline" href="./contact.html">Contact</a></li>
-          <li><a class="underline" href="about.html">About</a></li>
+          <li><a class="underline" href="./about.html">About</a></li>
         </ul>
 
         <a href="order.html" class="primary nav-button"> Make a reservation </a>
@@ -50,6 +50,7 @@
           name="name"
           class="t-input"
           placeholder="John F. Doe"
+          required
         />
       </div>
 
@@ -62,20 +63,21 @@
           id="email"
           name="email"
           placeholder="john@gmail.com"
+          required
         />
       </div>
 
       <div class="user-input">
         <label for="category">Category</label>
         <select name="category" id="category" class="t-input">
-          <option value="feedback">Feedback</option>
-          <option value="technical">Technical</option>
           <option value="support">Customer Support</option>
+          <option value="website">Website</option>
+          <option value="feedback">Feedback</option>
         </select>
       </div>
 
       <div class="user-input">
-        <label for="message">Message Body</label>
+        <label for="message">How can we help you?</label>
         <br />
         <textarea
           class="t-input"
@@ -83,6 +85,8 @@
           id="message"
           rows="6"
           cols="40"
+          placeholder=""
+          required
         ></textarea>
       </div>
 
