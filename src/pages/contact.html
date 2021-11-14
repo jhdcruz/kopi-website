@@ -31,37 +31,63 @@
           <li><a class="underline" href="about.html">About</a></li>
         </ul>
 
-        <a href="order.html" class="primary nav-button">
-          Make a reservation
-        </a>
+        <a href="order.html" class="primary nav-button"> Make a reservation </a>
       </div>
     </nav>
 
-    <section class="form">
-      <form>
-        <!-- Name -->
+    <form class="form">
+      <div class="heading">
+        <h2>Feel free to contact us,</h2>
+        <p>We will respond as fast as we can.</p>
+      </div>
+
+      <div class="user-input">
         <label for="fn">What's your full name?</label>
-        <input type="text" id="fn" name="fname" placeholder="John F. Doe" />
+        <br />
+        <input
+          type="text"
+          id="fn"
+          name="name"
+          class="t-input"
+          placeholder="John F. Doe"
+        />
+      </div>
 
+      <div class="user-input">
         <label for="email">Your email?</label>
-        <input type="email" id="email" name="email" placeholder="john@gmail.com"/>
+        <br />
+        <input
+          class="t-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="john@gmail.com"
+        />
+      </div>
 
-        <label for="subject">Subject</label>
-        <select name="subject" id="subject">
+      <div class="user-input">
+        <label for="category">Category</label>
+        <select name="category" id="category" class="t-input">
           <option value="feedback">Feedback</option>
           <option value="technical">Technical</option>
           <option value="support">Customer Support</option>
         </select>
+      </div>
 
+      <div class="user-input">
         <label for="message">Message Body</label>
-        <textarea name="message" id="message" rows="6" cols="40"></textarea>
+        <br />
+        <textarea
+          class="t-input"
+          name="message"
+          id="message"
+          rows="6"
+          cols="40"
+        ></textarea>
+      </div>
 
-        <button type="submit" class="primary">Submit</button>
-      </form>
-    </section>
-
-    <footer class="copyright copyright-footer">
-      Copyright &copy; 2021 Kopi Inc. All rights reserved.
-    </footer>
+      <button type="submit" class="primary">Submit</button>
+      <a type="submit" class="secondary underline">Reset</a>
+    </form>
   </body>
 </html>

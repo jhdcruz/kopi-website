@@ -1,3 +1,60 @@
+body {
+  background: url("../assets/img/contact.jpg") no-repeat right;
+  background-size: 60vw 100vh;
+  height: 100vh;
+  overflow: hidden;
+}
+
 textarea {
   resize: vertical;
+}
+
+select {
+  width: max-content !important;
+}
+
+.heading {
+  margin-bottom: 1.5vw;
+
+  h2 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 0.25vw 0;
+  }
+}
+
+.form {
+  background-color: white;
+  display: block;
+  box-shadow: 0 0.15vw 1.25rem #222;
+  width: max-content;
+  height: 36vw;
+  padding: 3vw 10vw;
+  z-index: 2;
+
+  button {
+    float: right;
+    margin: 0.35vw 0;
+    padding: 0.5vw 1.75vw;
+    font-size: 1vw;
+  }
+
+  a {
+    float: right;
+    margin: 0.75vw 1.5vw;
+  }
+}
+
+.user-input {
+  padding: 0.25vw;
+  width: max-content;
+}
+
+.t-input {
+  width: 25vw;
+  border-radius: 0.25vw;
+  border: 0.1vw solid #ccc;
+  padding: 0.5vw 0.35vw;
+  margin: 0.35vw 0;
+  background-color: transparent;
 }
