@@ -77,6 +77,11 @@ hr {
     padding: 2.5vw;
     text-align: center;
     border-radius: 0.5vw;
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
 
     .item-img {
       width: 15vw;
