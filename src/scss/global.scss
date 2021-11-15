@@ -129,9 +129,21 @@ a {
 }
 
 .copyright-footer {
-  margin-top: 3vw;
-  padding: 1vw 0;
   text-align: center;
+  margin-top: 3vw;
+  padding: 1vw 1.4vw;
   background-color: rgba(235, 235, 235, 0.5);
   z-index: 4;
+}
+
+.copyright-absolute {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+::selection {
+  background: #bd8550;
+  color: white;
 }
