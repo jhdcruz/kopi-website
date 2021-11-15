@@ -1,4 +1,4 @@
-/* Reset defaults */
+/* Global Defaults */
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +15,7 @@ a {
   color: black;
 }
 
+/* Navigation */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -74,7 +75,7 @@ a {
   } /* .menu */
 } /* .nav */
 
-/* Reusable Underline Hover Effect */
+/* Hover Effect */
 .underline {
   &::after {
     position: absolute;
@@ -95,6 +96,7 @@ a {
   }
 }
 
+/* Buttons */
 .primary {
   color: white;
   background-color: #bd8550;
@@ -121,6 +123,7 @@ a {
   position: relative;
 }
 
+/* Copyright */
 .copyright {
   font-weight: 600;
   font-size: 0.9vw;
@@ -143,7 +146,67 @@ a {
   right: 0;
 }
 
+/* Form */
+form {
+  background-color: white;
+  display: block;
+  box-shadow: 0 0.15vw 1.25vw #222;
+  width: max-content;
+  height: 100vh;
+  padding: 4vw 10vw;
+  z-index: 2;
+
+  .heading {
+    margin-bottom: 1.5vw;
+
+    h2 {
+      width: max-content;
+      font-size: 2vw;
+      font-weight: 700;
+      margin: 0.25vw 0;
+    }
+  }
+
+  select {
+    width: max-content !important;
+    font-size: 0.95vw;
+  }
+
+  button {
+    float: right;
+    margin: 0.35vw 0;
+    padding: 0.5vw 1.75vw;
+    font-size: 1vw;
+  }
+
+  .reset {
+    padding: 0.25vw;
+    margin: 0.78vw 1.5vw;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.user-input {
+  padding: 0.25vw;
+  width: max-content;
+}
+
+.t-input {
+  width: 25vw;
+  border-radius: 0.25vw;
+  border: 0.1vw solid #ccc;
+  padding: 0.5vw 0.35vw;
+  margin: 0.35vw 0;
+  background-color: transparent;
+}
+
+/* Pseudo Selectors */
 ::selection {
   background: #bd8550;
   color: white;
+}
+
+::placeholder {
+  font-size: 0.9vw;
 }
