@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us | Your one-stop shop for everyday coffee — Kopi</title>
+    <title>Reservation | Your one-stop shop for everyday coffee — Kopi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/order.css" />
   </head>
 
   <body>
@@ -33,16 +33,90 @@
           <li><a class="underline" href="./about.html">About</a></li>
         </ul>
 
-        <a href="./src/pages/order.html" class="primary nav-button">
+        <a href="./order.html" class="primary nav-button">
           Make a reservation
         </a>
       </div>
     </nav>
 
-    
+    <section class="reserve">
+      <form>
+        <div class="heading">
+          <span>7:00 AM — 12:00 PM.</span>
+          <h2>Reservation Form</h2>
+          <p>Please fill up the form in its corresponding format.</p>
+        </div>
 
-    <footer class="copyright copyright-footer">
-      Copyright &copy; 2021 Kopi Inc. All rights reserved.
-    </footer>
+        <div class="user-input">
+          <label for="fn">Full Name: <sup>(FN, MI, LN)</sup></label>
+          <br />
+          <input
+            type="text"
+            id="fn"
+            name="name"
+            class="t-input"
+            placeholder="John F. Doe"
+            required
+          />
+        </div>
+
+        <div class="user-input input-inline">
+          <label for="email">Email Address:</label>
+          <br />
+          <input
+            class="t-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john@gmail.com"
+            required
+          />
+        </div>
+
+        <div class="user-input input-inline">
+          <label for="phone">Contact No.</label>
+          <br />
+          <input
+            class="t-input"
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="ex. 09175501100"
+            required
+          />
+        </div>
+
+        <div class="user-input">
+          <label for="category">Category </label>
+          <select name="category" id="category" class="t-input">
+            <option value="support">Customer Support</option>
+            <option value="website">Website</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+
+        <div class="user-input">
+          <label for="message">How can we help you?</label>
+          <br />
+          <textarea
+            class="t-input"
+            name="message"
+            id="message"
+            rows="6"
+            cols="40"
+            placeholder=""
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="primary">Reserve</button>
+        <button type="reset" class="secondary underline reset">Reset</button>
+      </form>
+
+      <div class="receipt">
+        <!-- TODO: Dynamic receipt preview -->
+        <table></table>
+      </div>
+    </section>
   </body>
 </html>
