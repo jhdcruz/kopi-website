@@ -40,15 +40,15 @@
     </nav>
 
     <section class="reserve">
-      <form>
+      <form onsubmit="javascript:printReceipt();">
         <div class="heading">
-          <span>7:00 AM — 12:00 PM.</span>
+          <span>Store is open 24/7.</span>
           <h2>Reservation Form</h2>
           <p>Please fill up the form in its corresponding format.</p>
         </div>
 
         <div class="user-input">
-          <label for="fn">Full Name: <sup>(FN, MI, LN)</sup></label>
+          <label for="fn">Full Name:* <sup>(FN, MI, LN)</sup></label>
           <br />
           <input
             type="text"
@@ -61,7 +61,7 @@
         </div>
 
         <div class="user-input input-inline">
-          <label for="email">Email Address:</label>
+          <label for="email">Email Address:*</label>
           <br />
           <input
             class="t-input"
@@ -74,49 +74,182 @@
         </div>
 
         <div class="user-input input-inline">
-          <label for="phone">Contact No.</label>
+          <label for="phone">Contact No.*</label>
           <br />
           <input
             class="t-input"
-            type="text"
+            type="tel"
             id="phone"
             name="phone"
+            pattern="[0-9]{11}"
             placeholder="ex. 09175501100"
             required
           />
         </div>
 
         <div class="user-input">
-          <label for="category">Category </label>
-          <select name="category" id="category" class="t-input">
-            <option value="support">Customer Support</option>
-            <option value="website">Website</option>
-            <option value="feedback">Feedback</option>
-          </select>
-        </div>
-
-        <div class="user-input">
-          <label for="message">How can we help you?</label>
+          <label for="remarks">Remarks:</label>
           <br />
           <textarea
             class="t-input"
-            name="message"
-            id="message"
+            name="remarks"
+            id="remarks"
             rows="6"
             cols="40"
             placeholder=""
-            required
           ></textarea>
         </div>
+
+        <span>* means required.</span>
 
         <button type="submit" class="primary">Reserve</button>
         <button type="reset" class="secondary underline reset">Reset</button>
       </form>
 
-      <div class="receipt">
-        <!-- TODO: Dynamic receipt preview -->
-        <table></table>
+      <!-- Receipt -->
+      <div class="receipt" id="printarea">
+        <div class="receipt-header">
+          <h3>Kopi<sup> &#8482;</sup></h3>
+          <p class="subheading">938 Aurora Blvd. Quezon City, Philippines.</p>
+          <p class="subheading">+63 945 449 3246 | support@kopi.com</p>
+        </div>
+
+        <div>
+          <p id="date">Date: <span id="date-issued"></span></p>
+          <p>Order #: <span id="order_id"></span></p>
+          <p>Name: <span id="c_name"></span></p>
+          <p>Phone No.: <span id="c_phone"></span></p>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty.</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr id="black-data">
+              <td>Black</td>
+              <td>
+                <input
+                  class="qty"
+                  id="black"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="0"
+                  name="black"
+                />
+              </td>
+              <td>
+                ₱<span id="p-black" class="priceTotal" value="15.00">0.00</span>
+              </td>
+            </tr>
+            <tr id="iced-data">
+              <td>Iced Latte</td>
+              <td>
+                <input
+                  class="qty"
+                  id="iced"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="0"
+                  name="iced"
+                />
+              </td>
+              <td>
+                ₱<span id="p-iced" class="priceTotal" value="700.00">0.00</span>
+              </td>
+            </tr>
+            <tr id="latte-data">
+              <td>Latte</td>
+              <td>
+                <input
+                  class="qty"
+                  id="latte"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="0"
+                  name="latte"
+                />
+              </td>
+              <td>
+                ₱<span id="p-latte" class="priceTotal" value="50.00">0.00</span>
+              </td>
+            </tr>
+            <tr id="macchiato-data">
+              <td>Macchiato</td>
+              <td>
+                <input
+                  class="qty"
+                  id="macchiato"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="0"
+                  name="macchiato"
+                />
+              </td>
+              <td>
+                ₱<span id="p-macchiato" class="priceTotal" value="60.00"
+                  >0.00</span
+                >
+              </td>
+            </tr>
+            <tr id="capuccino-data">
+              <td>Capuccino</td>
+              <td>
+                <input
+                  class="qty"
+                  id="capuccino"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="0"
+                  name="capuccino"
+                />
+              </td>
+              <td>
+                ₱<span id="p-capuccino" class="priceTotal" value="60.00"
+                  >0.00</span
+                >
+              </td>
+            </tr>
+          </tbody>
+          <tfoot id="tfoot"></tfoot>
+        </table>
+
+        <!-- Barcode Line -->
+        <svg id="barcode"></svg>
+
+        <p class="receipt-footer">
+          VAT (12%): ₱<span id="vat" class="bold">0.00</span>
+        </p>
+        <p class="receipt-footer">
+          Total: ₱<span id="total" class="bold">0.00</span>
+        </p>
+
+        <div id="note">
+          <hr />
+          <h4>Note:</h4>
+          <p>
+            Present this receipt to the cashier in the reservation lane.
+            <br />
+            This receipt/reservation is valid for 18 hours from the time of
+            issuance.
+            <br />
+            The "Company" or "Store" will not be liable for the loss of this
+            receipt.
+          </p>
+        </div>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/barcodes/JsBarcode.code128.min.js"></script>
+    <script src="../js/order.js"></script>
   </body>
 </html>

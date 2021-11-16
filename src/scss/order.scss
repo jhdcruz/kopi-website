@@ -1,6 +1,7 @@
 .reserve {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 2vw 6vw;
 }
 
 form {
@@ -8,7 +9,7 @@ form {
   width: max-content;
   box-shadow: none;
   height: max-content;
-  padding: 4vw 2vw 4vw 8vw;
+  padding: 4vw;
   z-index: 2;
 
   span {
@@ -29,6 +30,66 @@ form {
 }
 
 .receipt {
-  padding: 2.4vw 6vw 6vw 6vw;
   margin: 2vw;
+  height: max-content;
+  padding: 2vw;
+  box-shadow: 0 0 0.5vw #999;
+  border-radius: 1vw;
+
+  p {
+    margin: 0.28vw 0;
+  }
+
+  #date {
+    float: right;
+    text-align: right;
+  }
+
+  table {
+    text-align: center;
+    height: max-content;
+    margin: 1vw auto 5vw auto;
+    width: 100%;
+
+    th {
+      padding: 0.82vw;
+    }
+
+    input {
+      text-align: center;
+      width: 2vw;
+      padding: 0.2vw;
+      margin: 0 auto;
+    }
+  }
+
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 1.8vw;
+  }
+
+  #barcode {
+    float: left;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  .receipt-footer {
+    text-align: right;
+  }
+}
+
+#note {
+  text-align: left;
+  float: left;
+  display: none;
+  margin-top: 2rem;
+  width: 100%;
+
+  hr {
+    background-color: #999;
+    margin-bottom: 1rem;
+  }
 }
