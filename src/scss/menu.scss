@@ -67,7 +67,7 @@ hr {
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   width: max-content;
   padding: 0 5vw;
   margin: 0 auto;
@@ -84,8 +84,8 @@ hr {
     }
 
     .item-img {
-      width: 15vw;
-      margin: 0.75vw;
+      width: 12.4vw;
+      margin: 0.75vw 0;
     }
 
     h3 {
