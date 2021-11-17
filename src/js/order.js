@@ -20,14 +20,6 @@ let receipt_id = (d.querySelector("#order_id").innerHTML = `${id}`);
 const nameInput = d.querySelector("#fn");
 const phoneInput = d.querySelector("#phone");
 
-// Menu
-const itemBlack = d.querySelector("#black-data");
-const itemIced = d.querySelector("#iced-data");
-const itemLatte = d.querySelector("#latte-data");
-const itemMacchiato = d.querySelector("#macchiato-data");
-const itemCappuccino = d.querySelector("#cappuccino-data");
-
-// TODO: Rewrite to array
 const blackQty = d.querySelector("#black");
 const icedQty = d.querySelector("#iced");
 const latteQty = d.querySelector("#latte");
