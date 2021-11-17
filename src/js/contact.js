@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 function generateTicket() {
   // Dos[;ay ticket on form submit
   let ticket = document.querySelector("#ticket");
