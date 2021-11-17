@@ -93,30 +93,17 @@ function getDateTime() {
   d.querySelector("#date-issued").innerHTML = date.toUTCString();
 }
 
-// remove items with 0 qty.
-function pruneOrders() {
-  if (blackQty.value === "0") {
-    itemBlack.remove();
-  }
-  if (icedQty.value === "0") {
-    itemIced.remove();
-  }
-  if (latteQty.value === "0") {
-    itemLatte.remove();
-  }
-  if (macchiatoQty.value === "0") {
-    itemMacchiato.remove();
-  }
-  if (cappuccinoQty.value === "0") {
-    itemCappuccino.remove();
-  }
-}
-
 // eslint-disable-next-line no-unused-vars
 function printReceipt(e) {
   getDateTime();
 
-  pruneOrders();
+  // remove items with 0 qty.
+  qtyInput.forEach((item) => {
+    if (item.value === "0") {
+      // select parent of the parent node.
+      item.parentNode.parentNode.remove();
+    }
+  });
 
   // Barcode Generator
   JsBarcode("#barcode", `${receipt_id}`, {
