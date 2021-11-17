@@ -20,6 +20,8 @@ let receipt_id = (d.querySelector("#order_id").innerHTML = `${id}`);
 const nameInput = d.querySelector("#fn");
 const phoneInput = d.querySelector("#phone");
 
+const paymentInput = d.querySelectorAll(".payment_method");
+
 const blackQty = d.querySelector("#black");
 const icedQty = d.querySelector("#iced");
 const latteQty = d.querySelector("#latte");
@@ -37,6 +39,10 @@ const total = d.querySelector("#total");
 nameInput.addEventListener("input", syncInputs, false);
 phoneInput.addEventListener("input", syncInputs, false);
 
+paymentInput.forEach((pm) => {
+  pm.addEventListener("change", syncInputs, false);
+});
+
 qtyInput.forEach((item) => {
   item.addEventListener("input", computeTotal, false);
 });
@@ -47,6 +53,13 @@ qtyInput.forEach((item) => {
 function syncInputs() {
   let nameValue = nameInput.value;
   let phoneValue = phoneInput.value;
+
+  paymentInput.forEach((method) => {
+    if (method.checked) {
+      // select parent of the parent node.
+      d.querySelector("#paymentM").innerHTML = `${method.value}`;
+    }
+  });
 
   d.querySelector("#c_name").innerHTML = nameValue;
   d.querySelector("#c_phone").innerHTML = phoneValue;

@@ -48,7 +48,7 @@
         </div>
 
         <div class="user-input">
-          <label for="fn">Full Name:* <sup>(FN, MI, LN)</sup></label>
+          <label for="fn">Full Name: * <sup>(FN, MI, LN)</sup></label>
           <br />
           <input
             type="text"
@@ -61,7 +61,7 @@
         </div>
 
         <div class="user-input input-inline">
-          <label for="email">Email Address:*</label>
+          <label for="email">Email Address: *</label>
           <br />
           <input
             class="t-input"
@@ -85,6 +85,31 @@
             placeholder="ex. 09175501100"
             required
           />
+        </div>
+
+        <div class="user-input">
+          <label>Payment Method: *</label>
+          <br />
+          <div class="radio-group">
+            <input
+              class="payment_method"
+              type="radio"
+              id="cash"
+              value="Cash"
+              name="payment"
+              required
+            />
+            <label for="cash">Cash</label>
+
+            <input
+              class="payment_method"
+              type="radio"
+              id="card"
+              value="C/D. Card"
+              name="payment"
+            />
+            <label for="card">Credit/Debit Card</label>
+          </div>
         </div>
 
         <div class="user-input">
@@ -226,6 +251,9 @@
         <!-- Barcode Line -->
         <svg id="barcode"></svg>
 
+        <p class="receipt-footer">
+          Payment Method: <span id="paymentM" class="bold"></span>
+        </p>
         <p class="receipt-footer">
           VAT (12%): ₱<span id="vat" class="bold">0.00</span>
         </p>
