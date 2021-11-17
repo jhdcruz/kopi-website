@@ -54,7 +54,7 @@ function syncInputs() {
 
 // Sync qty. value to item's total price
 function computeTotal() {
-  // TODO: Rewrite to utilize array
+  // TODO: Utilize array?
   // Menu Items
   let blackValue = black * blackQty.value;
   let icedValue = iced * icedQty.value;
@@ -86,25 +86,42 @@ function getDateTime() {
 }
 
 // eslint-disable-next-line no-unused-vars
-function printReceipt(e) {
-  getDateTime();
+function printReceipt() {
+  // check for 1 order and no more than 10 in qty.
+  const orderValidate = [...qtyInput].some(
+    (qty) => parseInt(qty.value) !== 0 && parseInt(qty.value) <= 10
+  );
 
-  // remove items with 0 qty.
-  qtyInput.forEach((item) => {
-    if (item.value === "0") {
-      // select parent of the parent node.
-      item.parentNode.parentNode.remove();
-    }
-  });
+  if (orderValidate === true) {
+    getDateTime();
 
-  // Barcode Generator
-  JsBarcode("#barcode", `${receipt_id}`, {
-    format: "code128",
-    lineColor: "#000",
-    width: 2,
-    height: 20,
-    displayValue: false,
-  });
+    // remove items with 0 qty.
+    qtyInput.forEach((item) => {
+      if (item.value === "0") {
+        // select parent of the parent node.
+        item.parentNode.parentNode.remove();
+      }
 
-  window.print();
+      // Prevent qty change when cancelled illegally (esc)
+      item.style.border = "none";
+    });
+
+    // Generate barcode
+    // noinspection JSUnresolvedFunction
+    JsBarcode("#barcode", `${receipt_id}`, {
+      format: "code128",
+      lineColor: "#000",
+      width: 2,
+      height: 20,
+      displayValue: false,
+    });
+
+    // print receipt under #printarea
+    // refer to order.scss @media print {...}
+    window.print();
+  } else {
+    alert(
+      "Order not valid.\nThere should be at least 1 order and maximum of 10 qty."
+    );
+  }
 }
