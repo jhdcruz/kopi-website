@@ -37,63 +37,81 @@
       </div>
     </nav>
 
-    <form class="form">
-      <div class="heading">
-        <h2>Feel free to contact us,</h2>
-        <p>We will respond as fast as we can.</p>
+    <form class="form" onsubmit="return generateTicket();">
+      <!-- on form submission -->
+      <div id="ticket" class="heading">
+        <div class="heading">
+          <h2>We'll get back to you shortly.</h2>
+        </div>
+        <p>Ticket #: <span id="ticket_no"></span></p>
+        <hr />
+        <p>Name: <span id="sentName"></span></p>
+        <p>Email: <span id="sentEmail"></span></p>
+        <p id="message-body">Message: <br /></p>
+        <!--suppress HtmlFormInputWithoutLabel -->
+        <textarea id="sentMessage" disabled></textarea>
       </div>
 
-      <div class="user-input">
-        <label for="fn">What's your full name?</label>
-        <br />
-        <input
-          type="text"
-          id="fn"
-          name="name"
-          class="t-input"
-          placeholder="John F. Doe"
-          required
-        />
-      </div>
+      <div id="contact-form">
+        <div class="heading">
+          <h2>Feel free to contact us,</h2>
+          <p>We will respond as fast as we can.</p>
+        </div>
 
-      <div class="user-input">
-        <label for="email">Your email?</label>
-        <br />
-        <input
-          class="t-input"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="john@gmail.com"
-          required
-        />
-      </div>
+        <div class="user-input">
+          <label for="fn">What's your full name?</label>
+          <br />
+          <input
+            type="text"
+            id="fn"
+            name="name"
+            class="t-input"
+            placeholder="John F. Doe"
+            required
+          />
+        </div>
 
-      <div class="user-input">
-        <label for="category">Category </label>
-        <select name="category" id="category" class="t-input">
-          <option value="support">Customer Support</option>
-          <option value="website">Website</option>
-          <option value="feedback">Feedback</option>
-        </select>
-      </div>
+        <div class="user-input">
+          <label for="email">Your email?</label>
+          <br />
+          <input
+            class="t-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="john@gmail.com"
+            required
+          />
+        </div>
 
-      <div class="user-input">
-        <label for="message">How can we help you?</label>
-        <br />
-        <textarea
-          class="t-input"
-          name="message"
-          id="message"
-          rows="6"
-          cols="40"
-          placeholder=""
-          required
-        ></textarea>
-      </div>
+        <div class="user-input">
+          <label for="category">Category </label>
+          <select name="category" id="category" class="t-input">
+            <option value="support">Customer Support</option>
+            <option value="website">Website</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
 
-      <button type="submit" class="primary">Submit</button>
-      <button type="reset" class="secondary underline reset">Reset</button>
+        <div class="user-input">
+          <label for="message">How can we help you?</label>
+          <br />
+          <textarea
+            class="t-input"
+            name="message"
+            id="message"
+            rows="6"
+            cols="40"
+            placeholder=""
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="primary">Submit</button>
+        <button type="reset" class="secondary underline reset">Reset</button>
+      </div>
     </form>
+
+    <script src="../js/contact.js"></script>
   </body>
 </html>

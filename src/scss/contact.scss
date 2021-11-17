@@ -9,3 +9,44 @@ textarea {
   min-height: 6rem;
   max-height: 12vw;
 }
+
+hr {
+  margin: 1vw 0;
+}
+
+#ticket {
+  padding: 1vw;
+  display: none;
+  font-size: 1.2vw;
+  width: 100%;
+  height: max-content;
+
+  p {
+    margin: 0.4vw 0;
+    color: #bd8550;
+    font-weight: 700;
+
+    span {
+      color: black;
+      font-weight: normal;
+    }
+  }
+
+  #message-body {
+    margin-top: 0.8vw;
+  }
+
+  #sentMessage {
+    line-height: 1.4;
+    font-size: 1.2vw;
+    background-color: transparent;
+    border: none;
+    color: black;
+    resize: none;
+    width: 100%;
+    height: 50vh;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+}
