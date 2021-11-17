@@ -6,7 +6,7 @@ const black = 15.0;
 const iced = 70.0;
 const latte = 50.0;
 const macchiato = 60.0;
-const capuccino = 60.0;
+const cappuccino = 60.0;
 
 // --------------------- GENERATORS ------------------------
 
@@ -25,14 +25,14 @@ const itemBlack = d.querySelector("#black-data");
 const itemIced = d.querySelector("#iced-data");
 const itemLatte = d.querySelector("#latte-data");
 const itemMacchiato = d.querySelector("#macchiato-data");
-const itemCapuccino = d.querySelector("#capuccino-data");
+const itemCappuccino = d.querySelector("#cappuccino-data");
 
 // TODO: Rewrite to array
 const blackQty = d.querySelector("#black");
 const icedQty = d.querySelector("#iced");
 const latteQty = d.querySelector("#latte");
 const macchiatoQty = d.querySelector("#macchiato");
-const capuccinoQty = d.querySelector("#capuccino");
+const cappuccinoQty = d.querySelector("#cappuccino");
 
 let qtyInput = d.querySelectorAll(".qty");
 
@@ -68,18 +68,18 @@ function computeTotal() {
   let icedValue = iced * icedQty.value;
   let latteValue = latte * latteQty.value;
   let macchiatoValue = macchiato * macchiatoQty.value;
-  let capuccinoValue = capuccino * capuccinoQty.value;
+  let cappuccinoValue = cappuccino * cappuccinoQty.value;
 
   // Total
   let totalValue =
-    blackValue + icedValue + latteValue + macchiatoValue + capuccinoValue;
+    blackValue + icedValue + latteValue + macchiatoValue + cappuccinoValue;
   let vatValue = totalValue * 0.12 - totalValue + totalValue;
 
   d.querySelector("#p-black").innerHTML = blackValue.toFixed(2);
   d.querySelector("#p-iced").innerHTML = icedValue.toFixed(2);
   d.querySelector("#p-latte").innerHTML = latteValue.toFixed(2);
   d.querySelector("#p-macchiato").innerHTML = macchiatoValue.toFixed(2);
-  d.querySelector("#p-capuccino").innerHTML = capuccinoValue.toFixed(2);
+  d.querySelector("#p-cappuccino").innerHTML = cappuccinoValue.toFixed(2);
 
   // Display Total
   vatTotal.innerHTML = vatValue.toFixed(2);
@@ -107,8 +107,8 @@ function pruneOrders() {
   if (macchiatoQty.value === "0") {
     itemMacchiato.remove();
   }
-  if (capuccinoQty.value === "0") {
-    itemCapuccino.remove();
+  if (cappuccinoQty.value === "0") {
+    itemCappuccino.remove();
   }
 }
 
