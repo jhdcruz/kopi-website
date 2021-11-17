@@ -17,6 +17,10 @@ function generateTicket() {
   const inputEmail = document.querySelector("#email").value;
   document.querySelector("#sentEmail").innerHTML = `${inputEmail}`;
 
+  const categoryNode = document.querySelector("#category");
+  const inputCategory = categoryNode.options[categoryNode.selectedIndex].value;
+  document.querySelector("#sentCategory").innerHTML = `${inputCategory}`;
+
   const inputMessage = document.querySelector("#message").value;
   document.querySelector("#sentMessage").innerHTML = `${inputMessage}`;
 

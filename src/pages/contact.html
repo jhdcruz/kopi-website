@@ -47,6 +47,7 @@
         <hr />
         <p>Name: <span id="sentName"></span></p>
         <p>Email: <span id="sentEmail"></span></p>
+        <p>Category: <span id="sentCategory"></span></p>
         <p id="message-body">Message: <br /></p>
         <!--suppress HtmlFormInputWithoutLabel -->
         <textarea id="sentMessage" disabled></textarea>
@@ -86,10 +87,10 @@
 
         <div class="user-input">
           <label for="category">Category </label>
-          <select name="category" id="category" class="t-input">
-            <option value="support">Customer Support</option>
-            <option value="website">Website</option>
-            <option value="feedback">Feedback</option>
+          <select name="category" id="category" class="t-input" required>
+            <option value="Customer Support">Customer Support</option>
+            <option value="Website/Technical">Website</option>
+            <option value="Feedback">Feedback</option>
           </select>
         </div>
 
