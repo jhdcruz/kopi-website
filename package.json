@@ -8,7 +8,7 @@
     "build": "sass src/scss:src/css",
     "fmt": "yarn fmt:html && yarn fmt:css && yarn fmt:js",
     "fmt:html": "prettier --write **/*.html",
-    "fmt:css": "prettier --write **/*.css && stylelint --fix **/*.css",
+    "fmt:css": "prettier --write **/*.scss && stylelint --fix **/*.scss",
     "fmt:js": "eslint **/*.js --fix && prettier --write src/js/**/*.js"
   },
   "author": "Joshua Hero H. Dela Cruz (mjhdelacruz@tip.edu.ph)",
