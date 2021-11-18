@@ -12,6 +12,7 @@ const cappuccino = 60.0;
 
 // Order ID Generator
 let id = Math.floor(100000000 + Math.random() * 900000000);
+// eslint-disable-next-line no-unused-vars
 let receipt_id = (d.querySelector("#order_id").innerHTML = `${id}`);
 
 // --------------------- SELECTORS -------------------------
@@ -120,8 +121,7 @@ function printReceipt() {
     });
 
     // Generate barcode
-    // noinspection JSUnresolvedFunction
-    JsBarcode("#barcode", `${receipt_id}`, {
+    JsBarcode("#barcode", `${id}`, {
       format: "code128",
       lineColor: "#000",
       width: 2,
